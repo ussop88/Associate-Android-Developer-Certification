@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var root: ConstraintLayout
     private val toastPrototype = ToastPrototype()
     private lateinit var welcomeText: TextView
-    private lateinit var notificationBuilder: NotificationBuilder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,11 +32,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        displayNotification()
+        layoutInflater
+        toastPrototype.showToast(this)
+    }
+
+    private fun displayNotification() {
         NotificationBuilder(this).apply {
             createNotificationChannel()
             show()
         }
-        layoutInflater
-        toastPrototype.showToast(this)
     }
 }
