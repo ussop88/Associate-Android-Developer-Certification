@@ -1,3 +1,6 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Android Certification</string>
+    <string name="welcome"> welcome  <xliff:g id="name"> Youssef </xliff:g></string>
+    <string name="channel_name">youssef channel</string>
+    <string name="channel_description">youssef channel whats up</string>
 </resources>
